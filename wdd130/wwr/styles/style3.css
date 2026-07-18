@@ -1,0 +1,90 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F4F4F9;
+    color: #2B2D42;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Header & Logo --- */
+header {
+    background-color: #1D3557;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    max-height: 60px;
+    width: auto;
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: #457B9D;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+    background-color: #E63946;
+}
+
+/* --- CSS Grid Layout for Main Content --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Profile gets 1 part, Purpose gets 2 parts */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1D3557;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* --- Responsive Layout for Mobile --- */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+    footer {
+        position: static;
+    }
+}
